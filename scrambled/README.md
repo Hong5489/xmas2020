@@ -1,8 +1,11 @@
 # Scrambled Carol (Crypto)
 Description:
 > I downloaded this carol a few days ago, and then I started reverse engineering some malware... Somehow my carol got scrambled after that, and next to it appeared some sort of weird script.
+
 > Can you help me recover the carol? It was a very good one.
+
 > Note: Challenge does not follow the normal flag format. Upload as lowercase.
+
 > Author: Gabies
 
 Files:
@@ -50,13 +53,13 @@ with open("output.txt", "w") as out_file:
 
 The script convert the `input.txt` into hex, then it map the hex value using `new_sigma` which random shuffled `0123456789abcdef` string
 
-We can't reverse the shuffle, but we can analyse the ciphertext!
+We can't reverse the shuffle, but we can **analyse the ciphertext frequency!**
 
 By using [Frequency Analysis](https://en.wikipedia.org/wiki/Frequency_analysis), we can recover the plaintext!
 
 Because the `output.txt` is very long, so it must have many sentences. 
 
-And each letter produce the same hex value, so we can use this technique
+**Each letter produce the same hex value**, so we can use this technique
 
 I used the letter frequency in this [website](https://inventwithpython.com/hacking/chapter20.html)
 
