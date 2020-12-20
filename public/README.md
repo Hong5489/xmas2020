@@ -23,9 +23,8 @@ from pwn import *
 p = remote("challs.xmas.htsp.ro" ,1000)
 p.recvuntil("= ")
 h = p.recvuntil("\n")[:-1]
-ans = pwnlib.util.iters.mbruteforce(lambda x: hashlib.sha256(x).hexdigest()[-5:] == h , string.ascii_lowercase, length = 10)
-p.sendline(ans.encode("hex"))
-p.interactive()
+ans = pwnlib.util.iters.mbruteforce(lambda x: hashlib.sha256(x.encode()).hexdigest()[-5:] == h.decode() , string.ascii_lowercase, length = 10)
+p.sendline(ans.encode().hex())
 ```
 Result:
 ```
