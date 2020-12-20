@@ -188,12 +188,13 @@ def get_key(self):
     p = self.get_prime()
     q = self.get_prime()
 ```
-
 Therefore, if we know what exponent it added, then we know the factor of n!
 
 Then we can calculate the private key to decrypt the `secret_message`!
 
 ## Find the exponent
+Since the 16 exponent only generate once
+
 If we find all the 16 random exponent, then we can brtue force to find the factor of n!
 
 But how we find it?
