@@ -439,3 +439,6 @@ $
 ```
 ## Flag
 > X-MAS{M4yb3_50m3__m0re_r4nd0mn3s5_w0u1d_b3_n1ce_eb0b0506}
+
+## Better solution
+After the ctf ends, saw [a writeup by lanthan](https://ctftime.org/writeup/25425) shows that this challenge can be solved by finding common factors for each public key (Which more easier and efficient way)
